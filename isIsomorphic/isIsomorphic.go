@@ -1,18 +1,17 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func main() {
 
-	s := "egg"
-	t := "add"
-
-	fmt.Println(isIsomorphic(s, t))
+	m := map[int]int{1:0, 2:10}
+	fmt.Println(m, m[0], m[1], m[1])
 }
 
 func isIsomorphic(s string, t string) bool {
+	if len(s) != len(t) {
+		return false
+	}
 	sm := make(map[uint8]uint8, 0)
 	tm := make(map[uint8]uint8, 0)
 	for i := range s {
