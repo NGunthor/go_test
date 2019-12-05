@@ -1,19 +1,11 @@
-package main
-
-import "fmt"
-
-func main() {
-
-	m := map[int]int{1:0, 2:10}
-	fmt.Println(m, m[0], m[1], m[1])
-}
+package isIsomorphic
 
 func isIsomorphic(s string, t string) bool {
 	if len(s) != len(t) {
 		return false
 	}
-	sm := make(map[uint8]uint8, 0)
-	tm := make(map[uint8]uint8, 0)
+	sm := make(map[uint8]uint8, len(s))
+	tm := make(map[uint8]uint8, len(t))
 	for i := range s {
 		sm[s[i]] = t[i]
 		tm[t[i]] = s[i]
