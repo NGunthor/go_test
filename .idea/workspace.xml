@@ -2,21 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73bd530a-8487-470c-97d7-31cf6ed82689" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/awesomeProject.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/adapter/adapter.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/set/testStructs.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/isIsomorphic/isIsomorphic.go" beforeDir="false" afterPath="$PROJECT_DIR$/isIsomorphic/isIsomorphic.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/isIsomorphic/isIsomorphic_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/isIsomorphic/isIsomorphic_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/set/set.go" beforeDir="false" afterPath="$PROJECT_DIR$/set/set.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/set/set_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/set/set_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/twoSums/hello.go" beforeDir="false" afterPath="$PROJECT_DIR$/twoSums/hello.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/twoSums/hello_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/twoSums/hello_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +30,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="GO_FMT" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
@@ -149,35 +137,39 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="set with tests v1" />
+    <option name="LAST_COMMIT_MESSAGE" value="set with tests v1" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="625" y="348" width="800" height="684" key="#GOROOT" timestamp="1575468151573">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="625" y="348" width="800" height="684" key="#GOROOT/70.27.1850.1053@70.27.1850.1053" timestamp="1575468151573" />
-    <state x="560" y="148" width="860" height="818" key="CommitChangelistDialog2" timestamp="1575639371019">
+    <state x="560" y="148" width="860" height="818" key="CommitChangelistDialog2" timestamp="1575639408420">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="560" y="148" width="860" height="818" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1575639371019" />
+    <state x="560" y="148" width="860" height="818" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1575639408420" />
     <state x="808" y="448" width="424" height="491" key="FileChooserDialogImpl" timestamp="1575550163092">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="808" y="448" width="424" height="491" key="FileChooserDialogImpl/70.27.1850.1053@70.27.1850.1053" timestamp="1575550163092" />
-    <state width="1804" height="275" key="GridCell.Tab.0.bottom" timestamp="1575639340004">
+    <state width="1804" height="275" key="GridCell.Tab.0.bottom" timestamp="1575639577828">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="275" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1575639340004" />
-    <state width="1804" height="275" key="GridCell.Tab.0.center" timestamp="1575639340004">
+    <state width="1804" height="275" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1575639577828" />
+    <state width="1804" height="275" key="GridCell.Tab.0.center" timestamp="1575639577826">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="275" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1575639340004" />
-    <state width="1804" height="275" key="GridCell.Tab.0.left" timestamp="1575639340004">
+    <state width="1804" height="275" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1575639577826" />
+    <state width="1804" height="275" key="GridCell.Tab.0.left" timestamp="1575639577824">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="275" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1575639340004" />
-    <state width="1804" height="275" key="GridCell.Tab.0.right" timestamp="1575639340004">
+    <state width="1804" height="275" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1575639577824" />
+    <state width="1804" height="275" key="GridCell.Tab.0.right" timestamp="1575639577827">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="275" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1575639340004" />
+    <state width="1804" height="275" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1575639577827" />
     <state width="1804" height="394" key="GridCell.Tab.1.bottom" timestamp="1575638113950">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
@@ -198,6 +190,10 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="519" y="215" width="1022" height="737" key="SettingsEditor/70.27.1850.1053@70.27.1850.1053" timestamp="1575474412782" />
+    <state x="590" y="278" width="800" height="558" key="Vcs.Push.Dialog.v2" timestamp="1575639410639">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="590" y="278" width="800" height="558" key="Vcs.Push.Dialog.v2/70.27.1850.1053@70.27.1850.1053" timestamp="1575639410639" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
