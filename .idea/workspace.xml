@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="73bd530a-8487-470c-97d7-31cf6ed82689" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/awesomeProject.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/adapter/adapter.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/set/testStructs.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/isIsomorphic/isIsomorphic.go" beforeDir="false" afterPath="$PROJECT_DIR$/isIsomorphic/isIsomorphic.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/isIsomorphic/isIsomorphic_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/isIsomorphic/isIsomorphic_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/set/set.go" beforeDir="false" afterPath="$PROJECT_DIR$/set/set.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/set/set_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/set/set_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/twoSums/hello.go" beforeDir="false" afterPath="$PROJECT_DIR$/twoSums/hello.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/twoSums/hello_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/twoSums/hello_test.go" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="/usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1UWLkfwsHCUzhNRHNR40ZhUO3m0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../github.com/quii/learn-go-with-tests" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RunManager" selected="Go Test.TestSet_IsSubset in tests/set">
+    <configuration name="TestSet_Difference in tests/set" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="awesomeProject" />
+      <working_directory value="$PROJECT_DIR$/set" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="tests/set" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestSet_Difference$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestSet_Intersection in tests/set" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="awesomeProject" />
+      <working_directory value="$PROJECT_DIR$/set" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="tests/set" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestSet_Intersection$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestSet_IsSubset in tests/set" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="awesomeProject" />
+      <working_directory value="$PROJECT_DIR$/set" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="tests/set" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestSet_IsSubset$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestSet_Union in tests/set" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="awesomeProject" />
+      <working_directory value="$PROJECT_DIR$/set" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="tests/set" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestSet_Union$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go test tests/set" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="awesomeProject" />
+      <working_directory value="$PROJECT_DIR$/set" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="tests/set" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Test.TestSet_IsSubset in tests/set" />
+        <item itemvalue="Go Test.go test tests/set" />
+        <item itemvalue="Go Test.TestSet_Difference in tests/set" />
+        <item itemvalue="Go Test.TestSet_Intersection in tests/set" />
+        <item itemvalue="Go Test.TestSet_Union in tests/set" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="625" y="348" width="800" height="684" key="#GOROOT" timestamp="1575468151573">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="625" y="348" width="800" height="684" key="#GOROOT/70.27.1850.1053@70.27.1850.1053" timestamp="1575468151573" />
+    <state x="560" y="148" width="860" height="818" key="CommitChangelistDialog2" timestamp="1575639371019">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="560" y="148" width="860" height="818" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1575639371019" />
+    <state x="808" y="448" width="424" height="491" key="FileChooserDialogImpl" timestamp="1575550163092">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="808" y="448" width="424" height="491" key="FileChooserDialogImpl/70.27.1850.1053@70.27.1850.1053" timestamp="1575550163092" />
+    <state width="1804" height="275" key="GridCell.Tab.0.bottom" timestamp="1575639340004">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="275" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1575639340004" />
+    <state width="1804" height="275" key="GridCell.Tab.0.center" timestamp="1575639340004">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="275" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1575639340004" />
+    <state width="1804" height="275" key="GridCell.Tab.0.left" timestamp="1575639340004">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="275" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1575639340004" />
+    <state width="1804" height="275" key="GridCell.Tab.0.right" timestamp="1575639340004">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="275" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1575639340004" />
+    <state width="1804" height="394" key="GridCell.Tab.1.bottom" timestamp="1575638113950">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="394" key="GridCell.Tab.1.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1575638113950" />
+    <state width="1804" height="394" key="GridCell.Tab.1.center" timestamp="1575638113950">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="394" key="GridCell.Tab.1.center/70.27.1850.1053@70.27.1850.1053" timestamp="1575638113950" />
+    <state width="1804" height="394" key="GridCell.Tab.1.left" timestamp="1575638113950">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="394" key="GridCell.Tab.1.left/70.27.1850.1053@70.27.1850.1053" timestamp="1575638113950" />
+    <state width="1804" height="394" key="GridCell.Tab.1.right" timestamp="1575638113950">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="1804" height="394" key="GridCell.Tab.1.right/70.27.1850.1053@70.27.1850.1053" timestamp="1575638113950" />
+    <state x="519" y="215" width="1022" height="737" key="SettingsEditor" timestamp="1575474412782">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="519" y="215" width="1022" height="737" key="SettingsEditor/70.27.1850.1053@70.27.1850.1053" timestamp="1575474412782" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/isIsomorphic/isIsomorphic_test.go</url>
+          <line>24</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/set/set_test.go</url>
+          <line>14</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/set/set.go</url>
+          <line>81</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

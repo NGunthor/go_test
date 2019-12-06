@@ -12,7 +12,7 @@ func TwoSum(nums []int, target int) []int {
 	}
 
 	for i, num := range nums {
-		if val, ok := theMap[target - num]; ok {
+		if val, ok := theMap[target-num]; ok {
 			if val <= i {
 				continue
 			}

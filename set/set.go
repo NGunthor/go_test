@@ -1,77 +1,104 @@
 package set
 
+import "sort"
+
 type set struct {
-	Items map[int]bool
-	len int
+	items map[int]bool
+	len   int
 }
 
-func Add(s *set, elements ...int) {
+func (s *set) Add(elements ...int) *set {
 	for _, element := range elements {
-		s.Items[element] = true
+		s.items[element] = true
 	}
-	s.len = len(s.Items)
+	s.Len()
+	return s
 }
 
-func Delete(s *set, elements ...int) {
+func (s *set) Len() int {
+	s.len = len(s.items)
+	return s.len
+}
+
+func (s *set) Delete(elements ...int) *set {
 	for _, element := range elements {
-		delete(s.Items, element)
+		delete(s.items, element)
 	}
-	s.len = len(s.Items)
+	s.Len()
+	return s
 }
 
-func Copy(set *set) set {
-	newSet := Make()
-	for k := range set.Items {
-		newSet.Items[k] = true
+func (s set) ToSlice() []int {
+	slice := make([]int, len(s.items))
+	i := 0
+	for k := range s.items {
+		slice[i] = k
+		i++
 	}
-	newSet.len = len(newSet.Items)
-	return newSet
+	sort.Ints(slice)
+	return slice
 }
 
-func Make() set {
-	return set{map[int]bool{}, 0}
+func (s set) Copy() set {
+	newSet := NewSet()
+	for k := range s.items {
+		newSet.items[k] = true
+	}
+	newSet.Len()
+	return *newSet
 }
 
-func Union(sets ...*set) set {
-	outSet := Make()
+func NewSet(elements ...int) *set {
+	out := set{items: make(map[int]bool, 0)}
+	for _, element := range elements {
+		out.Add(element)
+	}
+	out.Len()
+	return &out
+}
+
+func (s set) Union(sets ...set) set {
+	outSet := s.Copy()
 	for _, set := range sets {
-		for k, v := range set.Items {
-			outSet.Items[k] = v
+		for k, v := range set.items {
+			outSet.items[k] = v
 		}
 	}
-	outSet.len = len(outSet.Items)
+	outSet.Len()
 	return outSet
 }
 
-func Difference(a *set, b *set)  set{
-	outSet := Copy(a)
-	for k := range outSet.Items {
-		if b.Items[k] == true {
-			Delete(&outSet, k)
+func (s set) Difference(b set) set {
+	outSet := s.Copy()
+	for k := range outSet.items {
+		if b.items[k] == true {
+			outSet.Delete(k)
 		}
 	}
-	outSet.len = len(outSet.Items)
+	outSet.Len()
 	return outSet
 }
 
-func Intersection(sets ...*set) set {
-	outSet := Make()
-	currentSet := Copy(sets[0])
-	for i, set := range sets {
-		for k, v := range set.Items {
-			if currentSet.Items[k] == true && v == true && i != 0 {
-				Add(&outSet, k)
+func (s set) Intersection(sets ...set) set {
+	outSet := s.Copy()
+	var curSet set
+	for _, set := range sets {
+		curSet = outSet.Copy()
+		outSet = *NewSet()
+		for k := range set.items {
+			if curSet.items[k] == true && set.items[k] == true {
+				outSet.Add(k)
 			}
 		}
 	}
-	outSet.len = len(outSet.Items)
+	outSet.Len()
 	return outSet
 }
 
-func IsSubset(source *set, subsets ...*set) bool{
+func (s set) IsSubset(subsets ...set) bool {
 	for _, subset := range subsets {
-		for k, v := range subset.Items {
-			if source.Items[k] != v {
+		for k, v := range subset.items {
+			if s.items[k] != v {
 				return false
 			}
 		}

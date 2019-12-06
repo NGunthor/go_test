@@ -11,7 +11,7 @@ func isIsomorphic(s string, t string) bool {
 		tm[t[i]] = s[i]
 	}
 	for i := range s {
-		if t[i] != sm[s[i]] ||  s[i] != tm[t[i]]{
+		if t[i] != sm[s[i]] || s[i] != tm[t[i]] {
 			return false
 		}
 	}
