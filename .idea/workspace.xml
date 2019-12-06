@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73bd530a-8487-470c-97d7-31cf6ed82689" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/workerPool/workerPool.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +48,16 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
-  <component name="RunManager" selected="Go Test.TestSet_IsSubset in tests/set">
+  <component name="RunManager" selected="Go Build.go build tests">
+    <configuration name="go build tests" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="awesomeProject" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <package value="tests" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
     <configuration name="TestSet_Difference in tests/set" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="awesomeProject" />
       <working_directory value="$PROJECT_DIR$/set" />
@@ -80,17 +91,6 @@
       <pattern value="^TestSet_IsSubset$" />
       <method v="2" />
     </configuration>
-    <configuration name="TestSet_Union in tests/set" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="awesomeProject" />
-      <working_directory value="$PROJECT_DIR$/set" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="tests/set" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestSet_Union$" />
-      <method v="2" />
-    </configuration>
     <configuration name="go test tests/set" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="awesomeProject" />
       <working_directory value="$PROJECT_DIR$/set" />
@@ -103,11 +103,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build tests" />
         <item itemvalue="Go Test.TestSet_IsSubset in tests/set" />
         <item itemvalue="Go Test.go test tests/set" />
         <item itemvalue="Go Test.TestSet_Difference in tests/set" />
         <item itemvalue="Go Test.TestSet_Intersection in tests/set" />
-        <item itemvalue="Go Test.TestSet_Union in tests/set" />
       </list>
     </recent_temporary>
   </component>
@@ -139,61 +139,62 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="set with tests v1" />
-    <option name="LAST_COMMIT_MESSAGE" value="set with tests v1" />
+    <MESSAGE value="gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="gitignore" />
   </component>
   <component name="WindowStateProjectService">
     <state x="625" y="348" width="800" height="684" key="#GOROOT" timestamp="1575468151573">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="625" y="348" width="800" height="684" key="#GOROOT/70.27.1850.1053@70.27.1850.1053" timestamp="1575468151573" />
-    <state x="560" y="148" width="860" height="818" key="CommitChangelistDialog2" timestamp="1575639636652">
+    <state x="560" y="148" width="860" height="818" key="CommitChangelistDialog2" timestamp="1575649892176">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="560" y="148" width="860" height="818" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1575639636652" />
+    <state x="560" y="148" width="860" height="818" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1575649892176" />
     <state x="808" y="448" width="424" height="491" key="FileChooserDialogImpl" timestamp="1575550163092">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="808" y="448" width="424" height="491" key="FileChooserDialogImpl/70.27.1850.1053@70.27.1850.1053" timestamp="1575550163092" />
-    <state width="1804" height="275" key="GridCell.Tab.0.bottom" timestamp="1575639577828">
+    <state width="1804" height="275" key="GridCell.Tab.0.bottom" timestamp="1575649892208">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="275" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1575639577828" />
-    <state width="1804" height="275" key="GridCell.Tab.0.center" timestamp="1575639577826">
+    <state width="1804" height="275" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1575649892208" />
+    <state width="1804" height="275" key="GridCell.Tab.0.center" timestamp="1575649892208">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="275" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1575639577826" />
-    <state width="1804" height="275" key="GridCell.Tab.0.left" timestamp="1575639577824">
+    <state width="1804" height="275" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1575649892208" />
+    <state width="1804" height="275" key="GridCell.Tab.0.left" timestamp="1575649892207">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="275" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1575639577824" />
-    <state width="1804" height="275" key="GridCell.Tab.0.right" timestamp="1575639577827">
+    <state width="1804" height="275" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1575649892207" />
+    <state width="1804" height="275" key="GridCell.Tab.0.right" timestamp="1575649892208">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="275" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1575639577827" />
-    <state width="1804" height="394" key="GridCell.Tab.1.bottom" timestamp="1575638113950">
+    <state width="1804" height="275" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1575649892208" />
+    <state width="1804" height="394" key="GridCell.Tab.1.bottom" timestamp="1575649226141">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="394" key="GridCell.Tab.1.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1575638113950" />
-    <state width="1804" height="394" key="GridCell.Tab.1.center" timestamp="1575638113950">
+    <state width="1804" height="394" key="GridCell.Tab.1.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1575649226141" />
+    <state width="1804" height="394" key="GridCell.Tab.1.center" timestamp="1575649226141">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="394" key="GridCell.Tab.1.center/70.27.1850.1053@70.27.1850.1053" timestamp="1575638113950" />
-    <state width="1804" height="394" key="GridCell.Tab.1.left" timestamp="1575638113950">
+    <state width="1804" height="394" key="GridCell.Tab.1.center/70.27.1850.1053@70.27.1850.1053" timestamp="1575649226141" />
+    <state width="1804" height="394" key="GridCell.Tab.1.left" timestamp="1575649226141">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="394" key="GridCell.Tab.1.left/70.27.1850.1053@70.27.1850.1053" timestamp="1575638113950" />
-    <state width="1804" height="394" key="GridCell.Tab.1.right" timestamp="1575638113950">
+    <state width="1804" height="394" key="GridCell.Tab.1.left/70.27.1850.1053@70.27.1850.1053" timestamp="1575649226141" />
+    <state width="1804" height="394" key="GridCell.Tab.1.right" timestamp="1575649226141">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="1804" height="394" key="GridCell.Tab.1.right/70.27.1850.1053@70.27.1850.1053" timestamp="1575638113950" />
+    <state width="1804" height="394" key="GridCell.Tab.1.right/70.27.1850.1053@70.27.1850.1053" timestamp="1575649226141" />
     <state x="519" y="215" width="1022" height="737" key="SettingsEditor" timestamp="1575474412782">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="519" y="215" width="1022" height="737" key="SettingsEditor/70.27.1850.1053@70.27.1850.1053" timestamp="1575474412782" />
-    <state x="590" y="278" width="800" height="558" key="Vcs.Push.Dialog.v2" timestamp="1575639410639">
+    <state x="590" y="278" width="800" height="558" key="Vcs.Push.Dialog.v2" timestamp="1575639651830">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="590" y="278" width="800" height="558" key="Vcs.Push.Dialog.v2/70.27.1850.1053@70.27.1850.1053" timestamp="1575639410639" />
+    <state x="590" y="278" width="800" height="558" key="Vcs.Push.Dialog.v2/70.27.1850.1053@70.27.1850.1053" timestamp="1575639651830" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
