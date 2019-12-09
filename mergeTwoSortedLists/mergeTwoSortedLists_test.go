@@ -15,9 +15,9 @@ type Tests struct {
 
 var tests = []Tests{
 	{
-		nums1:  []int{1, 4, 3, 5, 3, 8, 0, 0, 0, 0},
+		nums1:  []int{1, 3,3,4,5,8, 0, 0, 0, 0},
 		m:      6,
-		nums2:  []int{10, 5, 6, 4},
+		nums2:  []int{4,5,6,10},
 		n:      4,
 		result: []int{1, 3, 3, 4, 4, 5, 5, 6, 8, 10},
 	},
@@ -25,7 +25,7 @@ var tests = []Tests{
 
 func TestMerge(t *testing.T) {
 	for _, test := range tests {
-		v := merge(test.nums1, test.m, test.nums2, test.n)
+		v := Merge(test.nums1, test.m, test.nums2, test.n)
 		if !reflect.DeepEqual(v, test.result) {
 			t.Error("For", test.nums1, test.nums2,
 				"expected", test.result,
