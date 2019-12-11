@@ -1,5 +1,5 @@
 package proxy
 
-type server interface {
+type Server interface {
 	HandleRequest(string, string) (int, string)
 }

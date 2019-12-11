@@ -1,4 +1,4 @@
-package proxy
+package application
 
 type application struct {
 }
@@ -8,9 +8,15 @@ func (a *application) HandleRequest(url, method string) (int, string) {
 		return 200, "OK"
 	}
 
+	//...
+
 	if url == "/create/product" && method == "POST" {
 		return 201, "Product Created"
 	}
 
 	return 404, "Not Found"
+}
+
+func NewApplication() *application{
+	return &application{}
 }

@@ -2,7 +2,6 @@ package proxy
 
 import (
 	"math/rand"
-	"time"
 )
 
 type boolgen struct {
@@ -23,6 +22,6 @@ func (b *boolgen) Bool() bool {
 	return result
 }
 
-func NewBoolGen() *boolgen {
-	return &boolgen{src: rand.NewSource(time.Now().UnixNano())}
+func NewBoolGen(source rand.Source) *boolgen {
+	return &boolgen{src: source}
 }

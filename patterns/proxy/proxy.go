@@ -1,17 +1,27 @@
 package proxy
 
-type httpServer struct {
-	application *application
-}
+import (
+	"math/rand"
+	"tests/patterns/proxy/application"
+	"time"
+)
 
-func NewHttpServer() *httpServer {
-	return &httpServer{&application{}}
+type httpServer struct {
+	application Server
 }
 
 func (hs *httpServer) HandleRequest(url, method string) (int, string) {
-	allowed := NewBoolGen().Bool()
+	allowed := NewBoolGen(rand.NewSource(time.Now().UnixNano())).Bool()
 	if !allowed {
 		return 403, "Not Allowed"
 	}
 	return hs.application.HandleRequest(url, method)
+}
+
+func main() {
+	NewHttpServer(application.NewApplication())
+}
+
+func NewHttpServer(s Server) Server {
+	return &httpServer{s}
 }
