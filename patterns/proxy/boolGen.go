@@ -6,8 +6,8 @@ import (
 )
 
 type boolgen struct {
-	src rand.Source
-	cache int64
+	src       rand.Source
+	cache     int64
 	remaining int
 }
 

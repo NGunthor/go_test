@@ -15,5 +15,3 @@ func (hs *httpServer) HandleRequest(url, method string) (int, string) {
 	}
 	return hs.application.HandleRequest(url, method)
 }
-
-

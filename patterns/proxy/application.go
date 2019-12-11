@@ -1,10 +1,9 @@
 package proxy
 
 type application struct {
-
 }
 
-func (a *application)HandleRequest(url, method string) (int, string) {
+func (a *application) HandleRequest(url, method string) (int, string) {
 	if url == "/myProfile" && method == "GET" {
 		return 200, "OK"
 	}
