@@ -1,30 +1,19 @@
 package proxy
 
-type Doer interface {
-	Do(s string) string
+type httpServer struct {
+	application *application
 }
 
-type proxy struct {
-	realObject Doer
+func NewHttpServer() *httpServer {
+	return &httpServer{&application{}}
 }
 
-type object struct {
-	value string
-}
-
-func (p *proxy)Do(s string) string {
-	if p.realObject == nil {
-		p.realObject = &object{}
+func (hs *httpServer) HandleRequest(url, method string) (int, string) {
+	allowed := NewBoolGen().Bool()
+	if !allowed {
+		return 403, "Not Allowed"
 	}
-	return "proxy " + p.realObject.Do(s)
-}
-
-func NewProxy() *proxy{
-	return &proxy{}
-}
-
-func (o *object)Do(s string) string {
-	return "value " + s
+	return hs.application.HandleRequest(url, method)
 }
 
 
