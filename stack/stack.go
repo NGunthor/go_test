@@ -1,17 +1,17 @@
 package stack
 
 type stack struct {
-	values []rune
+	values []int
 	size   int
 }
 
-func (s *stack) Push(r rune) {
+func (s *stack) Push(r int) {
 	s.values = append(s.values, r)
 	s.size++
 }
 
-func (s *stack) Pop() rune {
-	var out rune = 0
+func (s *stack) Pop() int {
+	var out int = 0
 	if s.size > 0 {
 		out = s.values[s.size-1]
 		s.values = s.values[:s.size-1]
@@ -24,8 +24,8 @@ func (s *stack) Len() int {
 	return s.size
 }
 
-func (s *stack) Peak() rune {
-	var out rune = 0
+func (s *stack) Peak() int {
+	var out int = 0
 	if s.size > 0 {
 		out = s.values[s.size-1]
 	}
@@ -33,5 +33,5 @@ func (s *stack) Peak() rune {
 }
 
 func NewStack() *stack {
-	return &stack{[]rune{}, 0}
+	return &stack{[]int{}, 0}
 }
