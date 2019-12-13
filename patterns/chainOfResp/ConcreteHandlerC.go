@@ -1,20 +1,20 @@
 package chainOfResp
 
-type ConcreteHandlerC struct {
+type concreteHandlerC struct {
 	next Handler
 }
 
-func (c *ConcreteHandlerC) Request(message string) string {
+func (c *concreteHandlerC) Request(message string) string {
 	if message != "fail" && c.next != nil {
 		return c.next.Request(message)
 	}
 	return "ConcreteHandlerC"
 }
 
-func (c *ConcreteHandlerC) SetNext(next Handler) {
+func (c *concreteHandlerC) SetNext(next Handler) {
 	c.next = next
 }
 
 func NewConcreteHandlerC() Handler {
-	return &ConcreteHandlerC{}
+	return &concreteHandlerC{}
 }
