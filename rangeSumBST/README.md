@@ -18,7 +18,7 @@ The binary search tree is guaranteed to have unique values.
 
 ***
 
-#####Note:
+<h5>Note:</h5>
 
 <ol>
 <li>The number of nodes in the tree is at most <code>10000</code>.</li>
