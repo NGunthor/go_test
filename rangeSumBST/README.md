@@ -1,4 +1,4 @@
-###Range Sum of BST<br>
+<h1>Range Sum of BST</h1><br>
 
 Given the `root` node of a binary search tree, return the sum of values of all nodes with value between `L` and `R` (inclusive).<br>
 
@@ -6,12 +6,12 @@ The binary search tree is guaranteed to have unique values.
 
 ---
 
-#####Example 1:<br>
+<h5>Example 1:</h3><br>
 
     Input: root = [10,5,15,3,7,null,18], L = 7, R = 15
     Output: 32
 
-#####Example 2:<br>
+<h5>Example 2:</h5><br>
 
     Input: root = [10,5,15,3,7,13,18,1,null,6], L = 6, R = 10
     Output: 23
