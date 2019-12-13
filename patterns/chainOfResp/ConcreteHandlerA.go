@@ -15,6 +15,6 @@ func (c *ConcreteHandlerA) SetNext(next Handler) {
 	c.next = next
 }
 
-func NewConcreteHandlerA() Handler{
+func NewConcreteHandlerA() Handler {
 	return &ConcreteHandlerA{}
 }
