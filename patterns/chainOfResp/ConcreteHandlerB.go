@@ -11,10 +11,6 @@ func (c *concreteHandlerB) Request(message string) string {
 	return "concreteHandlerB"
 }
 
-func (c *concreteHandlerB) SetNext(next Handler) {
-	c.next = next
-}
-
-func NewConcreteHandlerB() Handler {
-	return &concreteHandlerB{}
+func NewConcreteHandlerB(next *Handler) Handler {
+	return &concreteHandlerB{next: *next}
 }
