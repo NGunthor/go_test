@@ -5,7 +5,7 @@ type concreteObserverA struct {
 }
 
 //Updates the state of a concrete observer ((implements Observer interface)
-func (s *concreteObserverA)Update() {
+func (s *concreteObserverA) Update() {
 	s.val++
 }
 

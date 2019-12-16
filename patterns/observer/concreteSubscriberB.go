@@ -5,7 +5,7 @@ type concreteObserverB struct {
 }
 
 //Updates the state of a concrete observer
-func (s *concreteObserverB)Update() {
+func (s *concreteObserverB) Update() {
 	s.val += 10
 }
 
