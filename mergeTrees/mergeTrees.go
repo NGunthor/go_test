@@ -1,5 +1,6 @@
 package mergeTrees
 
+//A struct that imagine a node of the Tree
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode
