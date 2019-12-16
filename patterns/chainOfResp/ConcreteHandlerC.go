@@ -13,6 +13,6 @@ func (c *concreteHandlerC) Request(message string) string {
 }
 
 //NewConcreteHandlerC
-func NewConcreteHandlerC(next *Handler) Handler {
-	return &concreteHandlerC{next: *next}
+func NewConcreteHandlerC(next Handler) Handler {
+	return &concreteHandlerC{next: next}
 }

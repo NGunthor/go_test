@@ -6,9 +6,6 @@ import (
 )
 
 func main() {
-	a := chainOfResp.NewConcreteHandlerA()
-	b := chainOfResp.NewConcreteHandlerB()
-	a.SetNext(b)
-	b.SetNext(chainOfResp.NewConcreteHandlerC())
-	fmt.Println(a.Request(""))
+	a := chainOfResp.NewConcreteHandlerA(chainOfResp.NewConcreteHandlerB(chainOfResp.NewConcreteHandlerC(nil)))
+	fmt.Println(a.Request("asd"))
 }
