@@ -3,6 +3,7 @@ package chainOfResp
 type concreteHandlerB struct {
 	next Handler
 }
+
 //Handler interface implementation
 func (c *concreteHandlerB) Request(message string) string {
 	if message != "fail" && c.next != nil {
@@ -10,6 +11,7 @@ func (c *concreteHandlerB) Request(message string) string {
 	}
 	return "concreteHandlerB"
 }
+
 //NewConcreteHandlerB ...
 func NewConcreteHandlerB(next *Handler) Handler {
 	return &concreteHandlerB{next: *next}
