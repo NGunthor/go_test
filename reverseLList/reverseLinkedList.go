@@ -7,10 +7,9 @@ type ListNode struct {
 }
 
 func reverseList(head *ListNode) *ListNode {
-	if head == nil  || head.Next == nil {
+	if head == nil || head.Next == nil {
 		return head
 	}
-
 	cur := head.Next
 	prev := head
 
