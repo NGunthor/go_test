@@ -4,12 +4,12 @@ type concreteObserverB struct {
 	val int
 }
 
-//Updates the state of a concrete observer
+// Update refreshes the state of a concrete observer (implements Observer interface)
 func (s *concreteObserverB) Update() {
 	s.val += 10
 }
 
-//NewObserverB is a constructor for concreteObserverB
+// NewObserverB is a constructor for concreteObserverB
 func NewObserverB() Observer {
 	return &concreteObserverB{}
 }
