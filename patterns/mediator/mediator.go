@@ -13,13 +13,13 @@ type mediator struct {
 	colleagueB Account
 }
 
-func (m *mediator)Notify(id rune, amount int){
+func (m *mediator) Notify(id rune, amount int) {
 	if m.colleagueA == nil || m.colleagueB == nil {
 		log.Println("mediator required")
 		return
 	}
 	if id == 'A' {
-		if m.colleagueB.GetSum() - amount < 0 {
+		if m.colleagueB.GetSum()-amount < 0 {
 			log.Println("insufficient funds B")
 		} else {
 			m.colleagueA.add(amount)
@@ -27,7 +27,7 @@ func (m *mediator)Notify(id rune, amount int){
 		}
 	}
 	if id == 'B' {
-		if m.colleagueA.GetSum() - amount < 0 {
+		if m.colleagueA.GetSum()-amount < 0 {
 			log.Println("insufficient funds A")
 			return
 		} else {
@@ -43,4 +43,3 @@ func NewMediator(a Account, b Account) Mediator {
 		colleagueB: b,
 	}
 }
-
