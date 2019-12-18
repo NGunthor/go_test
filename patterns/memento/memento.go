@@ -1,5 +1,6 @@
 package memento
 
+// Memento provides memento interface
 type Memento interface {
 	getState() (int, string)
 }
