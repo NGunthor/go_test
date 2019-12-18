@@ -1,4 +1,4 @@
-##**Mediator**
+## **Mediator**
 
 The Mediator pattern refers to object level behavioral patterns.
 
