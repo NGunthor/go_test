@@ -4,6 +4,7 @@ import (
 	"log"
 )
 
+// Mediator provides
 type Mediator interface {
 	Notify(id rune, amount int)
 }
@@ -13,6 +14,7 @@ type mediator struct {
 	colleagueB Account
 }
 
+// Notify processes an operation from the mediator (implement Mediator interface)
 func (m *mediator) Notify(id rune, amount int) {
 	if m.colleagueA == nil || m.colleagueB == nil {
 		log.Println("mediator required")
@@ -37,6 +39,7 @@ func (m *mediator) Notify(id rune, amount int) {
 	}
 }
 
+// NewMediator ...
 func NewMediator(a Account, b Account) Mediator {
 	return &mediator{
 		colleagueA: a,
