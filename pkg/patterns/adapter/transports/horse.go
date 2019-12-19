@@ -2,6 +2,7 @@ package transports
 
 import "fmt"
 
+// Animal provides Animal functional
 type Animal interface {
 	Move()
 }
@@ -14,6 +15,7 @@ func (h *horse) Move() {
 	fmt.Println("horse is moving")
 }
 
+// NewHorse ...
 func NewHorse() *horse {
 	return &horse{}
 }
