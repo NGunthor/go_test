@@ -2,9 +2,10 @@ package main
 
 import (
 	"fmt"
+	"strings"
+
 	"github.com/NGunthor/go_test/pkg/patterns/visitor"
 	"github.com/NGunthor/go_test/pkg/patterns/visitor/expressions"
-	"strings"
 )
 
 func main() {
