@@ -1,4 +1,4 @@
-package expressions
+package visitor
 
 type Addition interface {
 	GetLeft() Expression
@@ -10,7 +10,7 @@ type addition struct {
 	right Expression
 }
 
-func (a *addition) Accept(visitor visitor) {
+func (a *addition) Accept(visitor Visitor) {
 	visitor.VisitAddition(a)
 }
 

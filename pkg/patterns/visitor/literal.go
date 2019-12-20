@@ -1,4 +1,4 @@
-package expressions
+package visitor
 
 type Literal interface {
 	GetValue() float64
@@ -8,7 +8,7 @@ type literal struct {
 	value float64
 }
 
-func (l *literal) Accept(visitor visitor) {
+func (l *literal) Accept(visitor Visitor) {
 	visitor.VisitLiteral(l)
 }
 

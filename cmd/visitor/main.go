@@ -5,15 +5,14 @@ import (
 	"strings"
 
 	"github.com/NGunthor/go_test/pkg/patterns/visitor"
-	"github.com/NGunthor/go_test/pkg/patterns/visitor/expressions"
 )
 
 func main() {
-	e := expressions.NewAddition(
-		expressions.NewAddition(
-			expressions.NewLiteral(1),
-			expressions.NewLiteral(2)),
-		expressions.NewLiteral(3))
+	e := visitor.NewAddition(
+		visitor.NewAddition(
+			visitor.NewLiteral(1),
+			visitor.NewLiteral(2)),
+		visitor.NewLiteral(3))
 	sb := strings.Builder{}
 	expVisitor := visitor.NewExpressionVisitor(&sb)
 	e.Accept(expVisitor)

@@ -5,28 +5,15 @@ import (
 	"strings"
 )
 
-type expression interface {
-	Accept(visitor Visitor)
-}
-
-type literal interface {
-	GetValue() expression
-}
-
-type addition interface {
-	GetLeft() expression
-	GetRight() expression
-}
-
 type expressionVisitor struct {
 	sb *strings.Builder
 }
 
-func (e *expressionVisitor) VisitLiteral(literal literal) {
+func (e *expressionVisitor) VisitLiteral(literal Literal) {
 	e.sb.WriteString(fmt.Sprintf("%g", literal.GetValue()))
 }
 
-func (e *expressionVisitor) VisitAddition(a addition) {
+func (e *expressionVisitor) VisitAddition(a Addition) {
 	e.sb.WriteString("(")
 	a.GetLeft().Accept(e)
 	e.sb.WriteString("+")
