@@ -6,6 +6,7 @@ type ListNode struct {
 	Next *ListNode
 }
 
+// AddTwoNumbers main algorithm function
 func AddTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 	if l1 == nil && l2 == nil {
 		return nil
