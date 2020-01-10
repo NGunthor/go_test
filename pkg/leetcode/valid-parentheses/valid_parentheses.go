@@ -1,5 +1,6 @@
 package valid_parentheses
 
+// IsValid the main algorithm function
 func IsValid(s string) bool {
 	stack := NewStack()
 	for _, char := range s {

@@ -7,6 +7,7 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+// MergeTrees main algorithm function
 func MergeTrees(t1 *TreeNode, t2 *TreeNode) *TreeNode {
 	outT := TreeNode{}
 

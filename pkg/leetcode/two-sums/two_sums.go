@@ -1,10 +1,6 @@
-package main
+package two_sums
 
-//func main() {
-//
-//
-//}
-
+// TwoSum the main algorithm function
 func TwoSum(nums []int, target int) []int {
 	theMap := map[int]int{}
 	for i, num := range nums {

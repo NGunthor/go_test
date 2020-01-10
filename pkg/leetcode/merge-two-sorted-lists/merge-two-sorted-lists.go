@@ -1,5 +1,6 @@
 package merge_two_sorted_lists
 
+// Merge main algorithm function
 func Merge(nums1 []int, m int, nums2 []int, n int) []int{
 	a := make([]int, 0)
 	nums1 = nums1[:m]
