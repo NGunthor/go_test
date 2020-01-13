@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+
 	memento2 "github.com/NGunthor/go_test/pkg/patterns/memento"
 )
 

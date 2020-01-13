@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+
 	chainOfResp2 "github.com/NGunthor/go_test/pkg/patterns/chain-of-resp"
 )
 

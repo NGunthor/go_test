@@ -1,6 +1,6 @@
 package number_of_islands
 
-// NumsIslands ...
+// NumsIslands is a main algorithm function
 func NumIslands(grid [][]byte) int {
 	count := 0
 	for y := range grid {
