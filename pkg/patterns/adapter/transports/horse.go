@@ -16,6 +16,6 @@ func (h *horse) Move() {
 }
 
 // NewHorse ...
-func NewHorse() *horse {
+func NewHorse() Animal {
 	return &horse{}
 }

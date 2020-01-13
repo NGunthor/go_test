@@ -16,6 +16,6 @@ func (a *auto) Drive() {
 }
 
 // NewAuto ...
-func NewAuto() *auto {
+func NewAuto() Transport {
 	return &auto{}
 }

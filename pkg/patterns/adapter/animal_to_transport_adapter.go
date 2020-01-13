@@ -1,9 +1,15 @@
 package adapter
 
-import "github.com/NGunthor/go_test/pkg/patterns/adapter/transports"
+type transport interface {
+	Drive()
+}
+
+type animal interface {
+	Move()
+}
 
 type animalToTransportAdapter struct {
-	animal transports.Animal
+	animal animal
 }
 
 // Drive performs drive work for Transport
@@ -12,6 +18,6 @@ func (h *animalToTransportAdapter) Drive() {
 }
 
 // NewAnimalToTransportAdapter ...
-func NewAnimalToTransportAdapter(animal transports.Animal) *animalToTransportAdapter {
+func NewAnimalToTransportAdapter(animal animal) transport {
 	return &animalToTransportAdapter{animal: animal}
 }
