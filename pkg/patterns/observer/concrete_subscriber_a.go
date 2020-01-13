@@ -9,7 +9,7 @@ func (s *concreteObserverA) Update() {
 	s.val++
 }
 
-// NewObserverA is a constructor for concreteObserverA
-func NewObserverA() Observer {
-	return &concreteObserverA{}
+// NewObserverA ...
+func NewObserverA(val int) Observer {
+	return &concreteObserverA{val:val}
 }

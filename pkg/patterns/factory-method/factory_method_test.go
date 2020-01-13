@@ -7,7 +7,7 @@ import (
 
 type Tests struct{
 	value  string
-	result Producter
+	result user
 }
 
 var tests = []Tests {

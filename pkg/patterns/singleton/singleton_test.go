@@ -7,21 +7,21 @@ import (
 )
 
 func TestGetInstance(t *testing.T) {
-	a := GetInstance()
-	b := GetInstance()
+	a := NewSingleton("qwert", 10)
+	b := NewSingleton("qwer", 23)
 	wg := sync.WaitGroup{}
 	for i := 0; i < 1000; i++ {
 		wg.Add(1)
 		go func(a Singleton, b Singleton, i int) {
 			defer wg.Done()
-			a.Name = strconv.Itoa(i)
+			a.SetName(strconv.Itoa(i))
 			i++
-			b.Name = strconv.Itoa(i)
-			b.Age = strconv.Itoa(i)
-			if a.Name != b.Name && b.Age == a.Age {
+			b.SetName(strconv.Itoa(i))
+			b.SetAge(i)
+			if a.GetName() != b.GetName() && b.GetAge() == a.GetAge() {
 				t.Error("false")
 			}
-		}(*a, *b, i)
+		}(a, b, i)
 	}
 	wg.Wait()
 }

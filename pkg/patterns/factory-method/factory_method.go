@@ -2,37 +2,33 @@ package factory_method
 
 import (
 	"fmt"
+
+	products "github.com/NGunthor/go_test/pkg/patterns/factory-method/products"
 )
 
-type Creator interface {
-	CreateProduct(s string) Producter
-}
-
-type Producter interface {
+type user interface {
 	Use() string
 }
 
-func (p * ConcreteCreator)CreateProduct(s string) Producter {
-	var prod Producter
+// Creator provides interface for factory method
+type Creator interface {
+	CreateProduct(s string) user
+}
+
+type concreteCreator struct {
+}
+
+// CreateProduct creates new concrete product as factory method (implements Creator interface)
+func (p * concreteCreator)CreateProduct(s string) user {
+	var prod user
 
 	switch s {
 	case "1":
-		prod = &Product1{
-			name: "asd",
-			age:  10,
-		}
+		prod = products.NewProduct1("qwerty", 10)
 	case "2":
-		prod = &Product2{
-			name:   "fdss",
-			age:    34,
-			broken: true,
-		}
+		prod = products.NewProduct2("asdfg", 15, true)
 	case "3":
-		prod = &Product3{
-			name: "32423",
-			age:  14,
-			disc: "dafdfgad",
-		}
+		prod = products.NewProduct3("zxcvb", 20, "qwertyasdfgzxcvb")
 	default:
 		{
 			fmt.Println("Undefined type")
@@ -42,39 +38,6 @@ func (p * ConcreteCreator)CreateProduct(s string) Producter {
 	return prod
 }
 
-type ConcreteCreator struct {
-
-}
-
 func NewCreator() Creator {
-	return &ConcreteCreator{}
-}
-
-type Product1 struct {
-	name string
-	age int
-}
-
-func (p *Product1)Use() string {
-	return p.name
-}
-
-type Product2 struct {
-	name string
-	age int
-	broken bool
-}
-
-func (p *Product2)Use() string {
-	return p.name
-}
-
-type Product3 struct {
-	name string
-	age int
-	disc string
-}
-
-func (p *Product3)Use() string {
-	return p.name
+	return &concreteCreator{}
 }

@@ -34,7 +34,7 @@ func (p *concretePublisher) Unpin(observer Observer) {
 	}
 }
 
-// NewPublisher is a constructor for a Publisher
+// NewPublisher ...
 func NewPublisher() Publisher {
 	return &concretePublisher{}
 }

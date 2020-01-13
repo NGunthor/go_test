@@ -20,22 +20,6 @@ type account struct {
 	mediator Mediator
 }
 
-func (a *account) add(amount int) {
-	if amount > 0 {
-		a.sum += amount
-	} else {
-		fmt.Println("incorrect amount")
-	}
-}
-
-func (a *account) withdraw(amount int) {
-	if amount > 0 || a.sum-amount < 0 {
-		a.sum -= amount
-	} else {
-		fmt.Println("incorrect amount")
-	}
-}
-
 // Send notifies a mediator for do operation (implements Account interface)
 func (a *account) Send(id rune, amount int) {
 	if a.mediator == nil {
@@ -58,6 +42,22 @@ func (a *account) SetMediator(mediator Mediator) {
 // Show shows all of fields of the account (implements Account interface)
 func (a *account) Show() {
 	fmt.Println(a)
+}
+
+func (a *account) add(amount int) {
+	if amount > 0 {
+		a.sum += amount
+	} else {
+		fmt.Println("incorrect amount")
+	}
+}
+
+func (a *account) withdraw(amount int) {
+	if amount > 0 || a.sum-amount < 0 {
+		a.sum -= amount
+	} else {
+		fmt.Println("incorrect amount")
+	}
 }
 
 //NewAccount ...

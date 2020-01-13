@@ -18,12 +18,12 @@ type originator struct {
 
 // SaveState saves state of originator into Memento interface (implements Originator interface)
 func (o *originator) SaveState() Memento {
-	return &memento{val: o.val, name: o.name}
+	return NewMemento(o.val, o.name)
 }
 
 // BackUpState gets an Memento and backs up by updating itself (implements Originator interface)
 func (o *originator) BackUpState(mem Memento) {
-	o.val, o.name = mem.getState()
+	o.val, o.name = mem.GetState()
 }
 
 // SetState sets its state by input

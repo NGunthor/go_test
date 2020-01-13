@@ -2,7 +2,6 @@ package proxy
 
 import (
 	"math/rand"
-	"tests/patterns/proxy/application"
 	"time"
 )
 
@@ -10,6 +9,7 @@ type httpServer struct {
 	application Server
 }
 
+// HandleRequest handles
 func (hs *httpServer) HandleRequest(url, method string) (int, string) {
 	allowed := NewBoolGen(rand.NewSource(time.Now().UnixNano())).Bool()
 	if !allowed {
@@ -18,10 +18,7 @@ func (hs *httpServer) HandleRequest(url, method string) (int, string) {
 	return hs.application.HandleRequest(url, method)
 }
 
-func main() {
-	NewHttpServer(application.NewApplication())
-}
-
+// NewHttpServer ...
 func NewHttpServer(s Server) Server {
 	return &httpServer{s}
 }

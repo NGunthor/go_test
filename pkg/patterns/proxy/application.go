@@ -3,6 +3,7 @@ package proxy
 type application struct {
 }
 
+// HandleRequest handles current request
 func (a *application) HandleRequest(url, method string) (int, string) {
 	if url == "/myProfile" && method == "GET" {
 		return 200, "OK"
@@ -17,6 +18,7 @@ func (a *application) HandleRequest(url, method string) (int, string) {
 	return 404, "Not Found"
 }
 
-func NewApplication() *application{
+// NewApplication ...
+func NewApplication() Server{
 	return &application{}
 }

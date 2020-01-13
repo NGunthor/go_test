@@ -7,11 +7,11 @@ import (
 
 func main() {
 	pub := observer2.NewPublisher()
-	a := observer2.NewObserverA()
+	a := observer2.NewObserverA(10)
 	pub.Attach(a)
-	pub.Attach(observer2.NewObserverB())
+	pub.Attach(observer2.NewObserverB(20))
 	pub.Notify()
-	pub.Attach(observer2.NewObserverB())
+	pub.Attach(observer2.NewObserverB(30))
 	pub.Notify()
 	pub.Show()
 	fmt.Println("============", a)

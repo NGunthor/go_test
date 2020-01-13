@@ -40,7 +40,7 @@ func (c *careTaker) PushMem(mem Memento) {
 // Show shows states of all Mementos (implements CareTaker interface)
 func (c *careTaker) Show() {
 	for _, mem := range c.memes {
-		fmt.Println(mem.getState())
+		fmt.Println(mem.GetState())
 	}
 }
  //NewCareTaker ...

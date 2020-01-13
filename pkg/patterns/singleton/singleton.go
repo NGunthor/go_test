@@ -2,17 +2,57 @@ package singleton
 
 import "sync"
 
-type Singleton struct {
-	Name string
-	Age string
+var (
+	instance Singleton
+	once sync.Once
+)
+
+// Singleton provides singleton's interface
+type Singleton interface {
+	DoWork()
+	SetName(name string)
+	SetAge(age int)
+	GetName() string
+	GetAge() int
 }
 
-var instance *Singleton
-var once sync.Once
+type singleton struct {
+	name string
+	age int
+}
 
-func GetInstance() *Singleton {
+// DoWork does a work via singleton (implements Singleton interface)
+func (s *singleton) DoWork() {
+	// ...
+}
+
+// SetName ...
+func (s *singleton) SetName(name string) {
+	s.name = name
+}
+
+// SetAge ...
+func (s *singleton) SetAge(age int) {
+	s.age = age
+}
+
+// GetName ...
+func (s *singleton) GetName() string {
+	return s.name
+}
+
+// GetAge ...
+func (s *singleton) GetAge() int {
+	return s.age
+}
+
+// NewSingleton ...
+func NewSingleton(name string, age int) Singleton {
 	once.Do(func () {
-		instance = &Singleton{}
+		instance = &singleton{
+			name: name,
+			age:  age,
+		}
 	})
 	return instance
 }
