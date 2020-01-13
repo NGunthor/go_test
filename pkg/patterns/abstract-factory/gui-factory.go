@@ -1,6 +1,7 @@
 package abstract_factory
 
+// GUIFactory provides interface for abstract factory
 type GUIFactory interface {
-	CreateButton() Button
-	CreateCheckbox() Button
+	CreateButton() painter
+	CreateCheckbox() painter
 }
