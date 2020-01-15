@@ -21,7 +21,8 @@ var successTests = []testStruct{
 
 func TestIsIsomorphicSuccess(t *testing.T) {
 	for _, test := range successTests {
-		v := isIsomorphic(test.values[0], test.values[1])
+		strings := NewStrings(test.values[0], test.values[1])
+		v := strings.IsIsomorphic()
 		if v != test.result {
 			t.Error("For", test.values,
 				"expected", test.result,
@@ -32,7 +33,8 @@ func TestIsIsomorphicSuccess(t *testing.T) {
 
 func TestIsIsomorphicFail(t *testing.T) {
 	for _, test := range failTests {
-		v := isIsomorphic(test.values[0], test.values[1])
+		strings := NewStrings(test.values[0], test.values[1])
+		v := strings.IsIsomorphic()
 		if v == test.result {
 			t.Fail()
 			t.Log("For", test.values,
