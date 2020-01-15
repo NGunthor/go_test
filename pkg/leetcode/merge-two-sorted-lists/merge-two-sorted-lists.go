@@ -1,24 +1,45 @@
 package merge_two_sorted_lists
 
-// Merge main algorithm function
-func Merge(nums1 []int, m int, nums2 []int, n int) []int{
+// Numbers provides interface for numbers struct
+type Numbers interface {
+	Merge() []int
+}
+
+type numbers struct {
+	nums1 	[]int
+	m		int
+	nums2	[]int
+	n		int
+}
+
+func (n *numbers)Merge() []int{
 	a := make([]int, 0)
-	nums1 = nums1[:m]
-	nums2 = nums2[:n]
-	for len(nums1) > 0 && len(nums2) > 0 {
-		if nums1[0] > nums2[0] {
-			a = append(a, nums2[0])
-			nums2 = nums2[1:]
+	n.nums1 = n.nums1[:n.m]
+	n.nums2 = n.nums2[:n.n]
+	for len(n.nums1) > 0 && len(n.nums2) > 0 {
+		if n.nums1[0] > n.nums2[0] {
+			a = append(a, n.nums2[0])
+			n.nums2 = n.nums2[1:]
 		} else {
-			a = append(a, nums1[0])
-			nums1 = nums1[1:]
+			a = append(a, n.nums1[0])
+			n.nums1 = n.nums1[1:]
 		}
 
 	}
-	if len(nums1) == 0 {
-		a = append(a, nums2...)
+	if len(n.nums1) == 0 {
+		a = append(a, n.nums2...)
 	} else {
-		a = append(a, nums2...)
+		a = append(a, n.nums2...)
 	}
 	return a
+}
+
+// NewNumbers
+func NewNumbers(nums1 []int, m int, nums2 []int, n int) Numbers {
+	return &numbers{
+		nums1: nums1,
+		m:     m,
+		nums2: nums2,
+		n:     n,
+	}
 }

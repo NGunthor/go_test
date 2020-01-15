@@ -25,7 +25,8 @@ var tests = []Tests{
 
 func TestMerge(t *testing.T) {
 	for _, test := range tests {
-		v := Merge(test.nums1, test.m, test.nums2, test.n)
+		n := NewNumbers(test.nums1, test.m, test.nums2, test.n)
+		v := n.Merge()
 		if !reflect.DeepEqual(v, test.result) {
 			t.Error("For", test.nums1, test.nums2,
 				"expected", test.result,
