@@ -1,24 +1,46 @@
 package reverse_llist
 
-//A struct that represents a node of the List
-type ListNode struct {
-	Val  int
-	Next *ListNode
+// ListNode provides interface for listNode struct
+type ListNode interface {
+	ReverseList() ListNode
+	GetNext() ListNode
+	SetNext(ListNode)
 }
 
-func reverseList(head *ListNode) *ListNode {
-	if head == nil || head.Next == nil {
-		return head
+type listNode struct {
+	val  int
+	next ListNode
+}
+
+func (l *listNode) GetNext() ListNode {
+	return l.next
+}
+
+func (l *listNode) SetNext(node ListNode) {
+	l.next = node
+}
+
+func (l *listNode) ReverseList() ListNode {
+	if l.GetNext() == nil {
+		return l
 	}
-	cur := head.Next
-	prev := head
+	cur := l.GetNext()
+	var prev ListNode = l
 
 	for cur != nil {
-		next := cur.Next
-		cur.Next = prev
+		next := cur.GetNext()
+		cur.SetNext(prev)
 		prev = cur
 		cur = next
 	}
-	head.Next = nil
+	l.SetNext(nil)
 	return prev
+}
+
+// NewListNode ...
+func NewListNode(val int, next ListNode) ListNode {
+	return &listNode{
+		val:  val,
+		next: next,
+	}
 }
