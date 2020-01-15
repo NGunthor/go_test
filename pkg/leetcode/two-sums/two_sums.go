@@ -1,14 +1,22 @@
 package two_sums
 
-// TwoSum the main algorithm function
-func TwoSum(nums []int, target int) []int {
+type Numbers interface {
+	TwoSum() []int
+}
+
+type numbers struct {
+	nums   []int
+	target int
+}
+
+func (n *numbers) TwoSum() []int {
 	theMap := map[int]int{}
-	for i, num := range nums {
+	for i, num := range n.nums {
 		theMap[num] = i
 	}
 
-	for i, num := range nums {
-		if val, ok := theMap[target-num]; ok {
+	for i, num := range n.nums {
+		if val, ok := theMap[n.target-num]; ok {
 			if val <= i {
 				continue
 			}
@@ -16,4 +24,11 @@ func TwoSum(nums []int, target int) []int {
 		}
 	}
 	return nil
+}
+
+func NewNumbers(nums []int, target int) Numbers {
+	return &numbers{
+		nums:   nums,
+		target: target,
+	}
 }
