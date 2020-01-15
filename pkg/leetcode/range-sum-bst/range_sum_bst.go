@@ -1,32 +1,37 @@
 package range_sum_bst
 
-//A struct that imagine a node of the Tree
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
+type Tree interface {
+	RangeSumBST(int, int) int
 }
 
-func rangeSumBST(root *TreeNode, L int, R int) int {
-	if root == nil {
+type tree struct {
+	head TreeNode
+}
+
+func (t *tree) RangeSumBST(L int, R int) int {
+	if t.head == nil {
 		return 0
 	}
 
 	var result int
-	if root.Val < L {
-		result += rangeSumBST(root.Right, L, R)
+	if t.head.GetValue() < L {
+		result += NewTree(t.head.GetRight()).RangeSumBST(L, R)
 	}
-	if root.Val > R {
-		result += rangeSumBST(root.Left, L, R)
+	if t.head.GetValue() > R {
+		result += NewTree(t.head.GetLeft()).RangeSumBST(L, R)
 	}
-	if root.Val >= L && root.Val <= R {
-		result += root.Val
-		if root.Val != R {
-			result += rangeSumBST(root.Right, L, R)
+	if t.head.GetValue() >= L && t.head.GetValue() <= R {
+		result += t.head.GetValue()
+		if t.head.GetValue() != R {
+			result += NewTree(t.head.GetRight()).RangeSumBST(L, R)
 		}
-		if root.Val != L {
-			result += rangeSumBST(root.Left, L, R)
+		if t.head.GetValue() != L {
+			result += NewTree(t.head.GetLeft()).RangeSumBST(L, R)
 		}
 	}
 	return result
+}
+
+func NewTree(node TreeNode) Tree {
+	return &tree{head:node}
 }
