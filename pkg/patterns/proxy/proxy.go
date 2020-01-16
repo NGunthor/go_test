@@ -1,27 +1,29 @@
 package proxy
 
-import (
-	"math/rand"
-	"tests/patterns/proxy/application"
-	"time"
-)
-
-type httpServer struct {
-	application Server
+type boolGenerator interface {
+	Generate() bool
 }
 
-func (hs *httpServer) HandleRequest(url, method string) (int, string) {
-	allowed := NewBoolGen(rand.NewSource(time.Now().UnixNano())).Bool()
+type server interface {
+	HandleRequest(string, string) (int, string)
+}
+
+type validator struct {
+	application server
+	generator boolGenerator
+}
+
+func (hs *validator) HandleRequest(url, method string) (int, string) {
+	allowed := hs.generator.Generate()
 	if !allowed {
 		return 403, "Not Allowed"
 	}
 	return hs.application.HandleRequest(url, method)
 }
 
-func main() {
-	NewHttpServer(application.NewApplication())
-}
-
-func NewHttpServer(s Server) Server {
-	return &httpServer{s}
+func NewValidator(server server, generator boolGenerator) server {
+	return &validator{
+		application: server,
+		generator:   generator,
+	}
 }

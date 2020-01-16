@@ -2,19 +2,21 @@ package main
 
 import (
 	"fmt"
-	observer2 "github.com/NGunthor/go_test/pkg/patterns/observer"
+	publisher "github.com/NGunthor/go_test/pkg/patterns/observer"
+	"github.com/NGunthor/go_test/pkg/patterns/observer/subscriber1"
+	"github.com/NGunthor/go_test/pkg/patterns/observer/subscriber2"
 )
 
 func main() {
-	pub := observer2.NewPublisher()
-	a := observer2.NewObserverA()
+	pub := publisher.NewPublisher()
+	a := subscriber1.NewObserverA()
 	pub.Attach(a)
-	pub.Attach(observer2.NewObserverB())
+	pub.Attach(subscriber2.NewObserverB())
 	pub.Notify()
-	pub.Attach(observer2.NewObserverB())
+	pub.Attach(subscriber2.NewObserverB())
 	pub.Notify()
 	pub.Show()
-	fmt.Println("============", a)
+	fmt.Println("============\n", a)
 	pub.Unpin(a)
 	pub.Notify()
 	pub.Show()

@@ -1,4 +1,15 @@
-package visitor
+package addition
+
+import "github.com/NGunthor/go_test/pkg/patterns/visitor/test2/literal"
+
+type visitor interface {
+	VisitLiteral(literal literal.Literal)
+	VisitAddition(addition Addition)
+}
+
+type Expression interface {
+	Accept(visitor visitor)
+}
 
 // Addition provides interface for addition
 type Addition interface {
@@ -14,16 +25,16 @@ type addition struct {
 }
 
 // Accept extends addition's functional via Visitor (implements Expression interface)
-func (a *addition) Accept(visitor Visitor) {
+func (a *addition) Accept(visitor visitor) {
 	visitor.VisitAddition(a)
 }
 
-// GetLeft gets left part of expression
+// GetLeft gets left part of Expression
 func (a *addition) GetLeft() Expression {
 	return a.left
 }
 
-// GetRight gets right part of expression
+// GetRight gets right part of Expression
 func (a *addition) GetRight() Expression {
 	return a.right
 }

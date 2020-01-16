@@ -1,11 +1,12 @@
 package main
 
 import (
-	"fmt"
-	chainOfResp2 "github.com/NGunthor/go_test/pkg/patterns/chain-of-resp"
+	handlerA "github.com/NGunthor/go_test/pkg/patterns/chain-of-resp/concreteA"
+	handlerB "github.com/NGunthor/go_test/pkg/patterns/chain-of-resp/concreteB"
+	handlerC "github.com/NGunthor/go_test/pkg/patterns/chain-of-resp/concreteC"
 )
 
 func main() {
-	a := chainOfResp2.NewConcreteHandlerA(chainOfResp2.NewConcreteHandlerB(chainOfResp2.NewConcreteHandlerC(nil)))
-	fmt.Println(a.Request("asd"))
+	a := handlerA.NewConcreteHandlerA(handlerB.NewConcreteHandlerB(handlerC.NewConcreteHandlerC(nil)))
+	a.Request("fail")
 }

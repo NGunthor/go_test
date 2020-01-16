@@ -1,4 +1,8 @@
-package observer
+package subscriber1
+
+type Observer interface {
+	Update()
+}
 
 type concreteObserverA struct {
 	val int

@@ -1,7 +1,11 @@
-package chain_of_resp
+package concreteC
+
+type handler interface {
+	Request(string) string
+}
 
 type concreteHandlerC struct {
-	next Handler
+	next handler
 }
 
 //Handler interface implementation
@@ -13,6 +17,6 @@ func (c *concreteHandlerC) Request(message string) string {
 }
 
 //NewConcreteHandlerC
-func NewConcreteHandlerC(next Handler) Handler {
+func NewConcreteHandlerC(next handler) handler {
 	return &concreteHandlerC{next: next}
 }
